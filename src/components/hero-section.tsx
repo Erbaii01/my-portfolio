@@ -26,7 +26,7 @@ export function HeroSection() {
       </div>
 
       <div className="mx-auto w-full max-w-sm">
-        <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-[#4f63a8]/60 bg-[#0d1220] p-1 shadow-[0_0_70px_rgba(83,111,255,0.35),inset_0_0_0_1px_rgba(138,91,255,0.25)] ring-1 ring-[#6d8bff]/40">
+        <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-blue-400/30 bg-[#0d1220] p-1 shadow-[0_0_36px_rgba(59,130,246,0.28)] ring-1 ring-blue-300/20">
           <div className="relative h-full w-full overflow-hidden rounded-[1.75rem]">
             <Image
               src="/profile.png"
