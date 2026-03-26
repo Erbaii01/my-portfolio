@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
 
 const floatingObjects = [
   { left: "8%", top: "14%", size: 180, delay: 0.1, duration: 11 },
@@ -27,11 +27,12 @@ export function OceanBackground() {
   const { scrollYProgress } = useScroll();
   const fadeOut = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const blurOut = useTransform(scrollYProgress, [0, 0.5], [0, 10]);
+  const blurFilter = useMotionTemplate`blur(${blurOut}px)`;
 
   return (
     <motion.div
       aria-hidden
-      style={{ opacity: fadeOut, filter: blurOut.to((v) => `blur(${v}px)`) }}
+      style={{ opacity: fadeOut, filter: blurFilter }}
       className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(67,118,255,0.34),transparent_36%),radial-gradient(circle_at_80%_4%,rgba(31,99,255,0.26),transparent_30%),radial-gradient(circle_at_50%_100%,rgba(20,56,138,0.52),transparent_70%)]" />
