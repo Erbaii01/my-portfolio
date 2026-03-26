@@ -28,3 +28,25 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes ocean-bubble-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  14% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(0, -72vh, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+.ocean-bubble {
+  animation-name: ocean-bubble-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.36);
+}
