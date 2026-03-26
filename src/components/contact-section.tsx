@@ -24,7 +24,9 @@ export function ContactSection() {
             edemrbaii@gmail.com
           </a>
           <a
-            href="#"
+            href="https://de.fiverr.com/s/dDy9ZDY"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#4f7cff] to-[#8a5bff] px-5 py-2.5 font-medium text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8a5bff]"
           >
             <MessageCircleMore size={16} />
